@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">首页</h1>
+	</header>
+	<div class="mui-content">
+	    <div class="mui-card-header mui-card-media">
+			<img src="./img/1.jpg"/>
+			<div class="mui-media-body">
+				小M
+				<p>发表于 2016-06-30 15:30</p>
+			</div>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" id = "upload">
+	        <span class="mui-icon mui-icon-plusempty"></span>
+	        <span class="mui-tab-label">上传</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-email"></span>
+	        <span class="mui-tab-label">邮件</span>
+	    </a>
+	    <a class="mui-tab-item" id= "geology">
+	        <span class="mui-icon mui-icon-paperplane"></span>
+	        <span class="mui-tab-label">位置</span>
+	    </a>
+	</nav>
+</body>
+</html>
+<script type= "text/javascript">
+	(function($){
+		$('#upload').on('tap','.mui-icon-plusempty',function(){
+			console.log(66)
+			$.openWindow({
+				url:'upload.html',
+				id:'upload.html'
+			})
+		})
+		
+		$('#geology').on('tap','.mui-icon-paperplane',function(){
+			$.openWindow({
+				url:'geolocation.html',
+				id:'geolocation.html'
+			})
+		})
+	})(mui)	
+</script>
